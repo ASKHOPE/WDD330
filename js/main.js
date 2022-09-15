@@ -6,7 +6,7 @@
 ];
 */
 
-const tableContents = document.querySelector("#dynamic-links");
+const dynamic_Contents = document.querySelector("#dynamic-links");
 const links = [
   {
     label: "Week1 notes",
@@ -27,5 +27,5 @@ links.forEach((link) => {
   url.setAttribute("href", link.url);
   url.textContent = link.label;
   list.appendChild(url);
-  tableContents.appendChild(list);
+  dynamic_Contents.appendChild(list);
 });
