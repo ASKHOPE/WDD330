@@ -6,7 +6,7 @@
 ];
 */
 
-const tableContents = document.querySelector("#table-contents");
+const tableContents = document.querySelector("#dynamic-links");
 const links = [
   {
     label: "Week1 notes",
