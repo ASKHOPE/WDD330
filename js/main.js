@@ -10,11 +10,11 @@ const tableContents = document.querySelector("#table-contents");
 const links = [
   {
     label: "Week1 notes",
-    url: "Week1/index.html",
+    url: "week1/index.html",
   },
   {
     label: "Week2 notes",
-    url: "Week2/index.html",
+    url: "week2/index.html",
   },
 ];
 
