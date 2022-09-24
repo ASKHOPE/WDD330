@@ -9,16 +9,19 @@
 const dynamic_Contents = document.querySelector("#dynamic-links");
 const links = [
   {
-    label: "Week1 notes",
+    label: "Week1 Notes",
     url: "week1/index.html",
   },
   {
-    label: "Week2 notes",
+    label: "Week2 Notes",
     url: "week2/index.html",
   },
-  
+  {
+    label: "Week2 Team Assignment",
+    url: "week2/teamwork.html",
+  },
+
   //Uncomment when the second week is made available
-  
 ];
 
 links.forEach((link) => {
