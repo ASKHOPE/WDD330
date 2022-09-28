@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 Portfolio - Week 3 Notes</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+     <main>
+      <h1>Week 3 Notes</h1>
+      <h2>Novice To Ninja : Objects - Lesson 5 Notes</h2>
+      
+      <p>
+        • What is an obeject literal and a method ? =>  An object in JavaScript is a self-contained set of related values and functions. <br>
+        • They act as a collection of named properties that map to any JavaScript value such as strings, numbers, booleans, arrays and functions. If a property’s value is a function, it is known as a method.<br>
+        • It’s very uncommon to use property and method names that don’t follow the rules for naming variables. In a real-world app, it's likely the "real name" property would actually be named real_name or realName.<br>
+        • The value of a property has always been allowed to be a JavaScript expression.The ability to create objects with computed property keys was introduced in ES6. This means that JavaScript code can be placed inside square brackets and the property key will be the return value of that code. <br>
+        • To call an object’s method we can also use dot or bracket notation. Calling a method is the same as invoking a function, so parentheses need to be placed after the method name. The 'in' operator can be used to check whether an object has a particular property<br>
+        • We can loop through all of an object’s properties and methods by using a for in loop. The Object.keys() method will return an array of all the keys of any object that is provided as an argument.  Object.entries() is also part of ES2017 and returns an array of key-value pairs. <br>
+        • How to add more propeties to the Object ? = >New properties and methods can be added to objects at any time in a program. This is done by simply assigning a value to the new property. & Any property can be removed from an object using the delete operator. <br>
+        • An important concept to get your head around is that objects are assigned by reference. This means that if a variable is assigned to an object that already exists, it will simply point to the exact same space in memory. <br>
+        • An object literal can be passed as a parameter to a function. This is useful when there are a large number of parameters, as it allows the arguments to be provided by name and in any order. <br>
+        • Naming collisions occur when the same variable or function name is used for different purposes by code sharing the same scope.  This might not seem likely, but imagine if you have lots of code that has been created over time – you might end up reusing a variable name without realizing<br>
+        • A solution to this problem is to use the object literal pattern to create a namespace for groups of related functions. This is done by creating an object literal that serves as the namespace, then adding any values as properties of that object, and any functions as methods.<br>
+        • What is JSON? => JavaScript Object Notation, It is an extremely popular lightweight data-storage format that is used by a large number of services for data serialization and configuration. <br>
+        • JSON is becoming increasingly popular as a data storage format, and many programming languages now have libraries dedicated to parsing and generating it. Since ECMAScript 5, there has been a global JSON object that has methods to allow this to be done in JavaScript.<br>
+        • The Math object is a built-in object that has several properties representing mathematical constants, as well as methods that carry out a number of common mathematical operations.<br>
+        • Math.abs(), Math.ceil(), Math.floor(), Math.round(), Math.trunc(), Math.exp(), Math.pow(), Math.sqrt(), Math.cbrt(), Math.hypot(), Math.log(), Math.min(), Math.max(), Math.random() ,etc<br>
+        • What is a Date Object? => Date objects contain information about dates and times. Each object represents a single moment in time.<br>
+        • The Epoch is 1st January 1970. This is an arbitrary date that is used in programming as a reference point in time from which to measure dates.<br>
+        • What is RegExp Object ? => A regular expression (or RegExp, for short) is a pattern that can be used to search strings for matches to the pattern. A common use is 'find and replace' type operations. For example, say you were looking for any word ending in 'ing', you could use the regular expression /[a-zA-Z]+ing$/.<br>
+        • What are Greedy and Lazy Modifiers ? => The greedy pattern /a.+a/ will return the whole string because it is the longest string that matches the pattern of 'a', followed by numerous characters and finishing with an 'a' & The lazy pattern /a.+?a/ changes the + modifier to +?.<br> This will only return the string 'abra' as this is the shortest string that matches the pattern 'a' followed by some characters and ending in an 'a'<br>
+        • Matched Groups : Sub-patterns can be created inside a regular expression by placing them inside parentheses. These are known as capturing groups. Any matches to these will then be stored in an array of matches.<br>
+      </p>
+      
+      <h2>Novice To Ninja : The DOM - Lesson 6 Notes</h2>
+
+      <p>
+        • What is DOM ? => The Document Object Model (DOM) allows you to access elements of a web page and enable interaction with the page by adding and removing elements, changing the order, content and attributes of elements, and even altering how they are styled.<br>
+        • The DOM is not actually part of JavaScript because it is language agnostic (although JavaScript is, by far, the language most commonly used with it). This means it can be used in any programming language, not just JavaScript. We can use JavaScript to access and modify different parts of a web page using a special built-in object called document.<br>
+        • The DOM provides several methods that allow us to access any element on a page. These methods will return a node object or a node list, which is an array-like object. These objects can then be assigned to a variable and be inspected or modified.<br>
+        • We can access the body element of a web page and assign it to the variable body by entering the following code into the browser console: "Copyconst body = document.body;"<br>
+        • Node lists are array-like objects, but they are not arrays. You can access each item using index notation. For example, document.images[0] will return the first image in the node list of all the images in the document.<br>
+        • The getElementById() method does exactly what it says on the tin. It returns a reference to the element with a unique id attribute that is given as an argument. & getElementsByTagName() will return a live node list of all the elements with the tag name that is provided as an argument. <br>
+        • getElementsByClassName() will return a live node list of all elements that have the class name that is supplied as an argument. <br>
+        • The document.querySelector() method allows you to use CSS notation to find the first element in the document that matches that matches a CSS selector provided as an argument. If no elements match, it will return null.<br>
+        • The document.querySelectorAll() method also uses CSS notation but returns a node list of all the elements in the document that match the CSS query selector. If no elements match, it will return an empty node list.<br>
+        • jQuery is a popular JavaScript framework that makes it very easy to find elements on a page using a CSS-style syntax. It uses document.querySelectorAll() in the background whenever it can.<br>
+        • Note: You do have to know a bit about CSS query selectors to be able to use this method! (Query Selectors)<br>
+        • All HTML elements have a large number of possible attributes such as 'class', 'id', src, and 'href'. The DOM has numerous getter and setter methods that can be used to view, add, remove or modify the value of any of these attributes.<br>
+        • The getAttribute() method returns the value of the attribute provided as an argument. & The setAttribute can change the value of an element’s attributes. It takes two arguments: the attribute that you wish to change, and the new value of that attribute.<br>
+        • we can modify the class name of an element using the setAttribute() method. There is also a className property that allows the class of an element to be set directly.<br>
+        • Changing the className property of an element by assignment will overwrite all other classes that have already been set on the element.This problem can be avoided by using the classList property instead.<br>
+        • The classList property is a list of all the classes an element has. It has a number of methods that make it easier to modify the class of an element. It’s supported in all modern browsers and in Internet Explorer from version 10 onwards.<br>
+        • The document object has a createElement() method that takes a tag name as a parameter and returns that element.  & A text node can be created using the document.createTextNode() method. It takes a parameter, which is a string containing the text that goes in the node.<br>
+        • Every node object has an appendChild() method that will add another node (given as an argument) as a child node. We want our newly created text node to be a child node of the list element node. This means that it’s the flash object that calls the method, with flashText as its argument<br>
+        • The appendChild() and insertBefore() methods can be used to move markup that already exists in the DOM as well. This is because a reference to a single DOM element can only exist once in the page, so if you use multiple inserts and appends, only the last one will have an effect.<br>
+        • An element can be removed from a page using the removeChild() method. This method is called on the parent node and has a single parameter, which is the node to be removed. It returns a reference to the removed node.<br>
+        • The replaceChild() method can be used to replace one node with another. It’s called on the parent node and has two parameters: the new node and the node that is to be replaced. <br>
+        • To stop any malicious content being added to a page using innerHTML, any code contained within script tags is not executed.<br>
+        • Every element node has a style property. This can be used to dynamically modify the presentation of any element on a web page.<br>
+        • Any CSS property names that are separated by dashes must be written in camelCase notation, so the dash is removed and the next letter is capitalized because dashes are not legal characters in property names.<br>
+        • One particularly useful CSS property often employed is the display property. This can be used to make elements disappear and reappear on the page as needed<br>
+        • Some browsers, such as Chrome, do not allow access to the methods of a CSSStyleDeclaration object, such as getPropertyCSSValue(), so attempting to use them will result in an error.<br>
+    
+    
+    
+    
+      </p>
+
+      <h2>Novice To Ninja : Events - Lesson 7 Notes</h2>
+       <p>
+        • Events are another part of the DOM and they are what provides the link between the web page and user interactions. Every time a user interacts with a web page, such as clicking on a link, pressing a key, or moving a mouse, an event occurs that our program can detect and then respond to.<br>
+        • Event listeners in JavaScript work in much the same way. They are like setting a notification to alert you when something happens. Instead of the program having to constantly check to see if an event has occurred, the event listener will let it know when the event happens, and the program can then respond appropriately. This allows the program to continue with other tasks while it waits for the event to happen.<br>
+        • The click event occurs when a user clicks with the mouse, presses the Enter key, or taps the screen, making it a very useful all-round event covering many types of interaction.<br>
+        • The original way of dealing with events in the browser was to use inline attributes that were added directly into the markup. <br>
+        • The addEventListener() method is called on a node object, the node to which the event listener is being applied. For example, this code will attach an event listener to the document’s body: "Copy document.body.addEventListener('click',doSomething);"<br>
+        • All modern browsers now support these event listeners. Unfortunately, this has not always been the case, and older versions of Internet Explorer (version 8 and below) use a different syntax. <br>
+        • Whenever an event handler is triggered by an event, the callback function is called. This function is automatically passed an event object as a parameter that contains information about the event.<br>
+        • We have already seen the click event that occurs when a mouse button is clicked. There are also the mousedown and mouseup events. These both occur before a click event is fired.There is also the dblclick event, which occurs when the user doubleclicks on the element to which the event listener is attached.<br>
+        • You should be very cautious of attaching both a click and doubleclick event to the same element. This is because it’s impossible to tell if a click is the first click of a doubleclick or just a single click. This means that a doubleclick event will always cause the click event to fire. <br>
+        • The key property has good support in modern browsers, but if you need to support older browsers, then a library such as keycode.js will come in handy as it normalizes the key codes returned. The jQuery library also has a which property that does this as well.<br>
+        • Many modern devices now support touch events. These are used on smartphones and tablets, as well as touch-screen monitors, satellite navigators and trackpads. Touch events are usually made with a finger, but can also be by stylus or another part of the body. There are a number of touch events that cover many types of touch interactions.<br>
+        • There are no 'swipe' events. These need to be created by using a combination of touchstart, touchmove, and touchleave events that monitor the distance and direction moved from start to finish of a touch event.<br>
+        • An event listener can be removed using the removeEventListener() method.  <br>
+        • Bubbling & Capturing => Bubbling is when the event fires on the element clicked on first, then bubbles up the document tree, firing an event on each parent element until it reaches the root node. & Capturing starts by firing an event on the root element, then propagates downwards, firing an event on each child element until it reaches the target element that was clicked on.<br>
+        • The bubble phase can be stopped from occurring by adding the event.stopPropagation() method into the callback function. In the following example, the event will fail to propagate as the third argument is false, which stops capturing, and the event.stopPropagation() method is called, which stops bubbling.<br>
+        • Be very wary of using the stopPropagation() method to stop the bubble phase occurring. There may be other event listeners attached to elements further up the chain that won’t fire as a result.<br>
+      </p>
+
+
+      <button onclick="location.href ='../'">Click Here To Go Back To Portfolio </button>
+      <button onclick="location.href ='../week3/test3.html'">Click Here To Go To Example Code which is tested.</button>
+      <button onclick="location.href ='../week3/events.html'">Click Here To Go To Example Code for event listener.</button>
+      <button onclick="location.href ='https://codepen.io/daz4126/pen/LLdJww'">Click Here To Go CodePen for events.</button>
+
+    <footer>Portfolio WDD 330 | Week 3</footer>
+  </body>
+</html>
