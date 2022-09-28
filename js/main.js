@@ -28,6 +28,14 @@ const links = [
     label: "Week3 Team Assignment",
     url: "week3/teamwork.html",
   },
+  {
+    label: "Week4 Notes",
+    url: "week3/index.html",
+  },
+  {
+    label: "Week4 Team Assignment",
+    url: "week4/teamwork.html",
+  },
 
   //Uncomment when the second week is made available
 ];
