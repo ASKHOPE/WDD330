@@ -1,1 +1,19 @@
 /* Updating soon  */
+main{
+    max-width: 100%;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color:rgb(87, 36, 145);
+    text-shadow: 2px 2px #a0a9c8;
+}
+
+ol,li,a{
+    /* text-decoration: none; */
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+
+}
