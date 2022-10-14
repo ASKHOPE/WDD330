@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+     <main>
+      <h2>Novice To Ninja : Testing And Deubgging - Lesson 10 DEBUGGING CODES FOR BROWSER CONSOLE</h2>
+
+    <h3>Code for factors of Number (n)</h3>
+<p>    
+    function factorsOf(n) {<br>
+    if(Number.isNaN(Number(n))) {<br>
+        throw new RangeError('Argument Error: Value must be an integer');<br>
+    }<br>
+    if(n < 0) {<br>
+        throw new RangeError('Argument Error: Number must be positive');<br>
+    }<br>
+    if(!Number.isInteger(n)) {<br>
+        throw new RangeError('Argument Error: Number must be an integer');<br>
+    }<br>
+    const factors = [];<br>
+    for (let i=1 , max = Math.sqrt(n); i <= max ; i++) {<br>
+        if (n%i === 0){<br>
+        factors.push(i,n/i);<br>
+        }<br>
+    }<br>
+    return factors.sort((a,b) => a - b);<br>
+}<br>
+
+
+</p>
+
+
+
+
+    <button onclick="location.href ='../'">Click Here To Go Back To Portfolio </button>
+      <button onclick="location.href ='./test5.html'">Click Here To Go To Example Code which is tested.</button>
+      <button onclick="location.href ='./test51.html'">Click Here To Go To Example Code for Debugger which is tested. </button>
+      <button onclick="location.href ='https://codepen.io/daz4126/pen/xrWoER'">Click Here To Go CodePen for Forms.</button>
+
+      <footer>Portfolio WDD 330 | Week 5 DEBUGGING CODES FOR BROWSER CONSOLE</footer>
+
+</body>
+
+</html>

@@ -12,37 +12,56 @@
       <h2>Novice To Ninja : Testing And Deubgging - Lesson 10 Notes</h2>
 
       <p>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
+        • Errors are caused when something goes wrong in a program. They are usually caused by one of the following: <br>
+            ➡️ System error ― there’s a problem with the system or external devices with which the program is interacting.<br>
+            ➡️ Programmer error ― the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.<br>
+            ➡️ User error ― the user has entered data incorrectly, which the program is unable to handle. <br>
+        • An exception is an error that produces a return value that can then be used by the program to deal with the error.<br>
+            &nbsp; For example, trying to call a method that is nonexistent will result in a reference error that raises an exception,<br>
+            &nbsp; as you can see in the example below when we try to call the mythical unicorn() function:  👉 Copy unicorn(); << ReferenceError: unicorn is not defined<br>
+        • An exception will also produce a stack trace. This is a sequence of functions or method calls that lead to the point where the error occurred. <br>
+            &nbsp; It’s often not just a single function or method call that causes an error. A stack trace will work backwards from the point at which the error occurred to identify the original function or method that started the sequence. <br>
+        • A warning can occur if there’s an error in the code that isn't enough to cause the program to crash. This means the program will continue to run after a warning.<br>
+            &nbsp; This might sound good, but it can be problematic, since the issue that produced the warning may cause the program to continue running incorrectly.<br>
+            &nbsp; An example of a mistake that could cause a warning is assigning a value to a variable that’s undeclared: 👉 Copy pi = 3.142; << JavaScript Warning: assignment to undeclared variable.<br>
+        • Strict Mode : ECMAScript 5 introduced a strict mode that produces more exceptions and warnings and prohibits the use of some deprecated features. <br>
+            &nbsp; This is due to the fact that strict mode considers coding practices that were previously accepted as just being 'poor style' as actual errors.<br>
+            &nbsp; Strict mode simply requires the following string to be added to the first line of a JavaScript file: 👉 Copy 'use strict'; <br>
+        • 💢 ES6 introduced JavaScript modules (covered later in chapter 15). These are self-contained pieces of code that are in strict mode by default, so the 'use strict' declaration is not required.<br>
+        • Increasing the chance of errors might seem like a bad idea at first, but it’s much better to spot errors early on, rather than have them cause problems later.<br>
+            &nbsp; Writing code in strict mode can also help improve its clarity and speed, since it follows conventions and will throw exceptions if any sloppy code practices are used.<br>
+        • The Trusty Alert : The most basic form of debugging is to use the alert() method to show a dialog at certain points in the code.<br>
+            &nbsp; Because alert() stops a program from running until OK is clicked, it allows us to effectively put breakpoints in the code that let us check the value of variables at that point to see if they’re what we expect them to be. <br>
+            &nbsp; The alert method inside the if block will allow us to see the value of the age variable at that point. Once we click on OK, we can then check the function returns the correct message.<br>
+        • Using the Console: Most modern JavaScript environments have a console object that provides a number of methods for logging information and debugging.<br>
+            &nbsp; It's not officially part of the ECMAScript specification, but is well supported in all the major browsers and Node.js.<br>
+        • Debugging Tools: Most modern browsers also have a debugging tool that allows you to set breakpoints in your code that will pause it at certain points.<br>
+            &nbsp; You can then see the values of all the variables at those points and modify them. One of the most useful commands is the debugger keyword. <br> 
+            &nbsp; This will create a breakpoint in your code that will pause the execution of the code and allow you to see where the program is currently up to. <br>
+            &nbsp; You can also hover over any variables to see what value they hold at that point. The program can then be restarted by clicking on the 'play' button.<br>
+        • 💢 Remember to remove any references to the debugger command before shipping any code, otherwise the program will appear to freeze when people try to use it! <br>
+        • Throwing Exceptions : So far we’ve seen errors that are thrown automatically by the JavaScript engine when an error occurs. It’s also possible to throw your own exceptions using the throw statement. <br>
+            &nbsp; This will allow for any problems in your code to be highlighted and dealt with, rather than lurk quietly in the background.<br>
+        • Error Objects : An error object can be created by the host environment when an exception occurs, or it can be created in the code using a constructor function, like so:<br>
+            &nbsp; 👉 Copy const error = new Error(); This constructor function takes a parameter that’s used as the error message: 👉Copy const error = new Error('Oops, something went wrong');<br>
+        • Exception Handling : When an exception occurs, the program terminates with an error message. This is ideal in development as it allows us to identify and fix errors. <br>
+            &nbsp; In production, however, it will appear as if the program has crashed, which does not reflect well on a ninja programmer.<br>
+        • It is possible to handle exceptions gracefully by catching the error. Any errors can be hidden from users, but still identified. We can then deal with the error appropriately ― perhaps even ignore it ― and keep the program running.<br>
+        • try, catch, and finally :If we suspect a piece of code will result in an exception, we can wrap it in a try block. This will run the code inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a catch block. <br>
+        • Tests : Testing is an important part of programming that can often be overlooked. Writing good tests means your code will be less brittle as it develops, and any errors will be identified early on.<br>
+        • Test-driven development (TDD) is the process of writing tests before any actual code. Obviously these tests will initially fail, because there is no code to test. The next step is to write some code to make the tests pass.<br>
+          &nbsp; After this, the code is refactored to make it faster, more readable, and remove any repetition. The code is continually tested at each stage to make sure it continues to work. <br>
+        • ➡️ Test-driven development is considered to be best practice, but in reality you'll find most developers tend to be more pragmatic when it comes to writing tests. The TDD mindset can be hard to always use, and at the end of the day, any tests are better than no tests at all. <br>
+        • Testing Frameworks : It is possible to write your own tests, as we saw earlier with the itSquareRoots4() test function, but this can be a laborious process.<br>
+          &nbsp; Testing frameworks provide a structure to write meaningful tests and then run them. There are a large number of frameworks available for JavaScript, but we’ll be focusing on the Jest framework.<br>
+        • Jest : Jest is a TDD framework, created by Facebook, that has gained a lot of popularity recently. It makes it easy to create and run tests by providing helper methods for common test assertions.<br>
       </p>
-
-        <p>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-        • <br>
-      </p>
-
 
 
       <button onclick="location.href ='../'">Click Here To Go Back To Portfolio </button>
-      <button onclick="location.href ='../test4.html'">Click Here To Go To Example Code which is tested.</button>
-      <button onclick="location.href ='../hero.html'">Click Here To Go To Example Code for Forms which is tested. </button>
-      <button onclick="location.href ='https://codepen.io/daz4126/pen/ZyoyOz'">Click Here To Go CodePen for Forms.</button>
+      <button onclick="location.href ='../test5.html'">Click Here To Go To Example Code which is tested.</button>
+      <button onclick="location.href ='./test51.html'">Click Here To Go To Example Code for Debugger which is tested. </button>
+      <button onclick="location.href ='https://codepen.io/daz4126/pen/xrWoER'">Click Here To Go CodePen for Forms.</button>
 
 
       <footer>Portfolio WDD 330 | Week 5</footer>
