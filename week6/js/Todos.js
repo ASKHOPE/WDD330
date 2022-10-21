@@ -75,11 +75,11 @@ export default class Todos {
 
 function filterBy(category){
     switch(category){
-        case 'active':      return  false;      //  the less code I write the less I have to debug
-        case 'complete':    return  true;       //  so sue me if I have multiple return points in my method
+        case 'active':      return  false;      
+        case 'complete':    return  true;       
         case 'all':         return  null;       //  null indicates show all todos
-        default :           return  null;       //  which by the way is not a good practice.
-    }                                           //  but in code this small it is worth the gamble
+        default :           return  null;       
+    }                                           
 }
 
 function getToDo(key) {
@@ -90,7 +90,7 @@ function getToDo(key) {
 function saveTodo(value, key) {
     let timestamp = Date.now();     //  this unique value will serve as the id for our todo item
     const newTodo = {id: timestamp, content: value, completed: false};     //  default to NOT completed
-    todoList.push(newTodo);         //  save new task item to our big list of todos
+    todoList.push(newTodo);         //  save new task item to todos
     lsH.writeToLS(key,todoList);    //  save our list of all todo items
 }
 
