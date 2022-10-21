@@ -44,7 +44,10 @@ const links = [
     label: "Week5 Team Assignment",
     url: "week5/teamwork.html",
   },
-
+  {
+    label: "Week6 Todo",
+    url: "week6/index.html",
+  },
   //Uncomment when the second week is made available
 ];
 
