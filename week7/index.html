@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 Portfolio - Week 7 Notes</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+      <h1>Week 7 Notes</h1>
+      <h2>Novice To Ninja : Further Functions - Lesson 11 Notes</h2>
+
+      <p>
+      • Call and Apply Methods : The call() method can be used to set the value of this inside a function to an object that is provided as the first argument.<br>
+      • We can create some objects that have a name property, then use the call() method to invoke the sayHello() function, providing each object as an argument. <br>
+      • If a function doesn’t refer to an object as this in its body, it can still be called using the call() method, but you need provide null as its first argument.<br>
+      • The apply() method works in the same way, except the arguments of the function are provided as an array, even if there is only one argument: 👉 Copy square.apply(null, [4]) << 16<br>
+      • This can be useful if the data you’re using as an argument is already in the form of an array, although it's not really needed in ES6, as the spread operator can be used to split an array of values into separate parameters.<br>
+      • These are two powerful methods, as they allow generalized functions to be written that are not tied to specific objects by being methods of that object. This gives flexibility over how the functions can be used.<br>
+      • Custom Properties : There is nothing to stop you adding your own properties to functions in the same way that you can add properties to any object in JavaScript.  <br>
+      • Memoization : A useful feature of this is that it provides result caching, or memoization. If a function takes some time to compute a return value, we can save the result in a cache property.<br>
+      • Then if the same argument is used again later, we can return the value from the cache, rather than having to compute the result again. <br>
+      • An Immediately Invoked Function Expression – or IIFE – (pronounced 'iffy') is an anonymous function that, as the name suggests, is invoked as soon as it’s defined. <br> 
+      • This is easily achieved by placing parentheses at the end of the function definition (remember we use parentheses to invoke a function). <br>
+      • There is no way to remove a variable from a scope once it’s been declared. If a variable is only required temporarily, it may cause confusion if it’s still available later in the code. <br>
+      • Placing any code that uses the temporary variable inside an IIFE will ensure it’s only available while the IIFE is invoked, then it will disappear. <br>
+      • One of the problems with simply placing 'use strict' at the beginning of a file is that it will enforce strict mode on all the JavaScript in the file, and if you’re using other people’s code, there’s no guarantee that they’ve coded in strict mode.<br>
+      • To avoid this, the recommended way to use strict mode is to place all your code inside an IIFE<br>
+      • Creating Self-contained Code Blocks : An IIFE can be used to enclose a block of code inside its own private scope so it doesn’t interfere with any other part of the program. Using IIFEs in this way means code can be added or removed separately.<br>
+      • Functions that Define and Rewrite Themselves : The dynamic nature of JavaScript means that a function is able to not only call itself, but define itself, and even redefine itself. <br>
+      • This is done by assigning an anonymous function to a variable that has the same name as the function. 👉 function party(){ console.log('Wow this is amazing!'); party = function(){ console.log('Been there, got the T-Shirt');}}<br>
+      • If any properties have previously been set on the function, these will be lost when the function redefines itself. <br>
+      • This is called the Lazy Definition Pattern and is often used when some initialization code is required the first time it’s invoked.<br>
+      • This means the initialization can be done the first time it’s called, then the function can be redefined to what you want it to be for every subsequent invocation.<br>
+      • Init-Time Branching : This technique can be used with the feature detection that we discussed in the last chapter to create functions that rewrite themselves, known as init-time branching. <br>
+      • This enables the functions to work more effectively in the browser, and avoid checking for features every time they’re invoked.<br>
+      • Recursive Functions : A recursive function is one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved.  <br>
+      • This function takes a number as a parameter, as well as another parameter called sequence, which has a default value of an array containing the first parameter. The second parameter is only used when the function calls itself recursively.<br>
+      • Event-driven Asynchronous Programming : Callbacks can be used to facilitate event-driven asynchronous programming. JavaScript is a single-threaded environment, which means only one piece of code will ever be processed at a time. <br>
+      • This may seem like a limitation, but non-blocking techniques can be used to ensure that the program continues to run. Instead of waiting for an event to occur, a callback can be created that’s invoked when the event happens. <br>
+      • Here’s an example of a function called wait() that accepts a callback.<br>
+      • To simulate an operation that takes some time to happen, we can use the setTimeout() function to call the callback after a given number of seconds: Copy function wait(message, callback, seconds){setTimeout(callback,seconds * 1000); console.log(message);}<br>
+      • 💢 Callback Hell : The increase in the use of asynchronous programming in JavaScript has meant that more and more callbacks are being used. This can result in messy and confusing 'spaghetti code'. <br>
+      • ➡️ Promises : A promise represents the future result of an asynchronous operation. Promises don't do anything that can't already be achieved using callbacks, but they help simplify the process, and avoid the convoluted code that can result from using multiple callbacks.<br>
+      • Resolved ― the asynchronous operation was completed successfully. Rejected ― the asynchronous operation didn’t work as expected, wasn't successfully completed or resulted in an error.<br>
+      • Both these outcomes will return any relevant data, and you can take the appropriate action based on the outcome of the promise.<br>
+      • A Super Promise : Imagine if a shady character gave you a red pill, and promised that if you took it, you'd be a superhero. <br>
+      • Being an adventurous sort, you swallow the pill and wait to see what happens. You're currently in the pending phase of a promise, waiting to see what the result will be.<br>
+      • Dealing With A Settled Promise : Once a promise has been settled, the then() method can be used to deal with the outcome. This method accepts two arguments. The first is a fulfilment function that’s called when the promise is resolved.<br>
+      • Any data returned from the resolve() function will be passed along to this function. 👉 promise.then( result => console.log(`Yes! I rolled a ${result}`), result => console.log(`Drat! ... I rolled a ${result}`) );<br>
+      • he second argument is a rejection function that’s called if the promise is rejected. Similar to the fulfilment function, the rejection function receives any data returned from the reject() function.<br>
+      • Chaining Multiple Promises : Promises come into their own when multiple asynchronous tasks are required to be carried out one after the other. <br>
+      • If each function that performs an asynchronous operation returns a promise, we can chain the then() methods together to form a sequential piece of code that’s easy to read. <br>
+      • Async Functions : Async functions were added to the ES2017 specification. These functions are preceded by the async keyword and allow you to write asynchronous code as if it was synchronous. This is achieved by using the await operator before an asynchronous function. <br>
+      • Callbacks can be used to build more generalized functions. Instead of having lots of specific functions, one function can be written that accepts a callback.<br>
+      • Functions That Return Functions : We've just seen that functions can accept another function as an argument (a callback), but they can also return a function.<br>
+      • Closures : Closures are one of JavaScript’s most powerful features, but they can be difficult to get your head around initially.<br>
+      • Returning Function : A closure is formed when the inner function is returned by the outer function, maintaining access to any variables declared inside the enclosing function.<br>
+      • Pure Functions : A key aspect of functional programming is its use of pure functions. A pure function is a function that adheres to the following rules:<br>
+       &nbsp; 1) The return value of a pure function should only depend on the values provided as arguments. It doesn't rely on values from somewhere else in the program.<br>
+       &nbsp; 2) There are no side-effects. A pure function doesn't change any values or data elsewhere in the program. It only makes non-destructive data transformations and returns new values, rather than altering any of the underlying data.<br>
+       &nbsp; 3) Referential transparency. Given the same arguments, a pure function will always return the same result.<br>
+            &nbsp;&nbsp;In order to follow these rules, any pure function must have:<br>
+            &nbsp;&nbsp;At least one argument; otherwise the return value must depend on something other than the arguments of the function, breaking the first rule.<br>
+            &nbsp;&nbsp;A return value; otherwise there’s no point in the function (unless it has changed something else in the program – in which case, it’s broken the 'no side-effects' rule).<br>
+      • Currying : Currying is a process that involves the partial application of functions. It’s named after the logician Haskell Curry — not the spicy food — just like the programming language Haskell is.<br>
+      • His work on a paper by Moses Schönfinkel lead to the development of this programming technique.<br>
+      • Currying relies on higher-order functions that are able to return partially applied functions. All curried functions are higher-order functions because they return a function, but not all higher-order functions are curried.<br>
+      • The power() function above is an example of a higher-order function that can be curried as it will expects two arguments, but will return another, curried function, if the only one argument is provided.<br>
+      • Getting Functional : Advocates of functional programming can be quite partisan about its benefits. <br>
+      • But even adopting some of its principles, such as keeping functions as pure as possible, and keeping changes in state to a minimum, will help improve the standard of your programming.<br>
+   
+
+      </p>
+
+      <h2>Novice To Ninja : Ajax - Lesson 13 Notes</h2>
+      
+      <p>
+      • Ajax :Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading. <br>
+      • This enables data to be sent and received in the background, as well as portions of a page to be updated in response to user events, while the rest of the program continues to run. <br>
+      • ➡️ Clients and Servers : The web of computers known as the internet can be separated into two parts: clients and servers. <br>
+      • A client, such as a web browser, will request a resource (usually a web page) from a server, which processes the request and sends back a response to the client.<br>
+      • JavaScript was originally designed as a client-side scripting language, meaning that it ran locally in the browser, adding dynamic features to the web page that was returned from the server.<br>
+      • Ajax allows JavaScript to request resources from a server on behalf of the client.  The resources requested are usually JSON data or small fragments of text or HTML rather than a whole web page.<br>
+      • The same-origin policy in browsers blocks all requests from a domain that is different from the page making the request. This policy is enforced by all modern browsers and is to stop any malicious JavaScript being run from an external source.<br>
+      • The problem is that the APIs of many websites rely on data being transferred across domains.Cross-origin resource sharing (CORS) is a solution to this problem as it allows resources to be requested from another website outside the original domain.
+      • The CORS standard works by using HTTP headers to indicate which domains can receive data. <br>
+      • ➡️ AJAX: Asynchronous ,JavaScript,XML : When a request for data is sent, the program doesn’t have to stop and wait for the response. <br>
+        &nbsp; It can carry on running, waiting for an event to fire when a response is received. By using callbacks to manage this, programs are able to run in an efficient way, avoiding lag as data is transferred back and forth.<br>
+        &nbsp; JavaScript was always considered a 'front-end' language, not used to communicate with the server. Ajax enabled JavaScript to send requests and receive responses from a server, allowing content to be updated in real time.<br>
+        &nbsp; When the term Ajax was originally coined, XML documents were often used to return data.Many different types of data can be sent, but by far the most commonly used in Ajax nowadays is JSON, which is more lightweight and easier to parse than XML. <br>
+        &nbsp; (Although it has never really taken off, the term Ajaj is sometimes used to describe the technique.) JSON also has the advantage of being natively supported in JavaScript, so you can deal with JavaScript objects rather than having to parse XML files using DOM methods.<br>
+      • ➡️ The Fetch API : The XMLHttpRequest object was finally standardized by the WHATWG and W3C as part of the HTML5 specification, despite it originally being implemented by Microsoft many years earlier, and already available in most browsers.<br>
+      • ➡️ Response Interface : The Fetch API introduced the Response interface that deals with the object that’s returned when the promise is fulfilled. Response objects have a number of properties and methods that allow us to process the response effectively.<br>
+      • ➡️ JSON Responses : JSON is probably the most common format for AJAX responses. The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object.<br>
+      • The redirect() method can be used to redirect to another URL. It creates a new promise that resolves to the response from the redirected URL.<br>
+      • The text() method takes a stream of text from the response, reads it to completion and then returns a promise that resolves to a USVSting object that can be treated as a string in JavaScript.<br>
+      • he blob() method is used to read a file of raw data, such as an image or a spreadsheet. Once it has read the whole file, it returns a promise that resolves with a blob object.<br>
+      • GET requests to retrieve resources POST requests, usually used to create a resource but can actually perform any task PUT requests to upsert, which means insert a resource or update it entirely PATCH requests to make partial updates to a resource DELETE requests to delete a resources.<br>
+      • ➡️ Headers Interface : HTTP headers are used to pass on any additional information about a request or response. Typical information contained in headers includes the file-type of the resource, cookie information, authentication information and when the resource was last modified.<br>
+      • The Fetch API introduced a Headers interface, which can be used to create a Headers object, which can then be added as a property of Request and Response objects.<br>
+      • 💢 Some of the 'facts' returned by chucknorris.io can be mildly offensive and use inappropriate language, so proceed with caution!<br>
+      • We can also use Ajax to send information. This can be a variety of formats, but is usually a JSON string. <br>
+      • To illustrate this, we're going to create a very simple To Do list application that sends information about a task to a server in JSON format, then receives a response to confirm that the task has been saved on a server.<br>
+      • The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using Ajax.<br>
+      • The Fetch API is, at the time of writing, what is known as a 'living standard', which means that the specification is being developed 'in the wild'.<br>
+      • This means that, despite it being available to use, it’s still subject to change as developers, browser vendors and end-users provide feedback about how it works.<br>
+    
+      </p>
+
+
+    
+      <button onclick="location.href ='../'">Click Here To Go Back To Portfolio </button>
+      <!-- <button onclick="location.href ='../test5.html'">Click Here To Go To Example Code which is tested.</button>
+      <button onclick="location.href ='./test51.html'">Click Here To Go To Example Code for Debugger which is tested. </button> -->
+      <button onclick="location.href ='https://codepen.io/daz4126/pen/PjRrGB'">Click Here To Go CodePen Further Functions Example .</button>
+      <button onclick="location.href ='https://codepen.io/daz4126/pen/LLdKby'">Click Here To Go CodePen AJAX Example .</button>
+
+
+
+      <footer>Portfolio WDD 330 | Week 5</footer>
+  </body>
+</html>
