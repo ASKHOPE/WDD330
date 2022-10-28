@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 330 Portfolio - Week 2 Notes</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <!-- <link rel="stylesheet" href="/styles.css" /> -->
+    <link rel="stylesheet" href="../css/style.css">
+
   </head>
   <body>
      <main>
@@ -20,10 +22,11 @@
              short, static, super, switch, synchronized, this, throw, throws, transient, true, try,<br>
               typeof, var, volatile, void, while, with, yield,undefined,Nan,Infinity.
       </p>
+      <p>
         <b>•Data types in JavaScript are : String ,Symbol (ES6 Onwards),Number,Boolean,Undefined,Null.</b>
         •In JavaScript, the let and const are the ways to name variables and contants var is now aboslete as ES6 uses Local Scope and Global Scope.<br>
        <b>•Constant and variable names are case sensitive, so ANSWER is different to Answer and answer.</b>
-     <b>•The backslash is used to escape special characters in strings such as Single quote marks \', Double quote marks \", End of line \n, Carriage return \r, Tab \t </b></p>
+     <b>•The backslash is used to escape special characters in strings such as Single quote marks \', Double quote marks \", End of line \n, Carriage return \r, Tab \t </b>
          • length property that tells us how many characters are in the string. toLowerCase() method, which will write in all lower-case letters toUpperCase() is viceversa.<br>
          • If you want to find where a certain character or substring appears in a string, we can use the indexOf() method. <br>
          • If we want the last occurrence of a character or substring, we can use the lastIndexOf() method<br>
@@ -33,17 +36,17 @@
          • The concat() method can be used to concatenate two or more strings together<br>
          • The trim() method will remove any whitespace from the beginning and end of a string<br>
          • ES6 also introduced the repeat() method that will repeat a string the stated number of times<br>
-         • JavaScript doesn’t distinguish between integers and floating point decimals ― they are both given the type of 'number',<br>
+         • JavaScript doesn't distinguish between integers and floating point decimals ― they are both given the type of 'number',<br>
            which is a different approach to most other programming languages. This behavior is set out in the ECMAScript specification,<br>
             but ES6 provides a handy method called Number.isInteger() that can be used to check if a number is an integer<br>
          • Numbers also have some built-in methods, although you need to be careful when using the dot notation with number literals<br>
            that are integers because JavaScript will confuse the dot with a decimal point. Don't worry though, there are a few ways<br>
-            to deal with this, which we’ll demonstrate with the toExponential() method; this returns the number as a string in exponential notation
-        <br><b>•Null means 'no value'. It can be thought of as a placeholder that JavaScript uses to say "there should be a value here, but there isn’t at the moment."</b>
+            to deal with this, which we'll demonstrate with the toExponential() method; this returns the number as a string in exponential notation
+        <br><b>•Null means 'no value'. It can be thought of as a placeholder that JavaScript uses to say "there should be a value here, but there isn't at the moment."</b>
          <br><b>• Undefined is the value given to variables that have not been assigned a value. We've already seen it used earlier in this chapter when variables<br>
-         are declared without being assigned a value. It can also occur if an object’s property doesn’t exist or a function has a missing parameter.<br>
-          It is basically JavaScript’s way of saying "I can’t find a value for this."</b>
-        • The correct way to check for equality is to use either a double equals operator, ==, known as "soft equality" or the triple equals operator, ===, known as "hard equality".
+         are declared without being assigned a value. It can also occur if an object's property doesn't exist or a function has a missing parameter.<br>
+          It is basically JavaScript's way of saying "I can't find a value for this."</b>
+        • The correct way to check for equality is to use either a double equals operator, ==, known as "soft equality" or the triple equals operator, ===, known as "hard equality".</p>
       <h2>Novice To Ninja : Arrays,Logic, and Loops - Lesson 3 Notes</h2>
        <p>
         • Sets were introduced to the specification in ES6. A set is a data structure that represents a collection of unique values, so it cannot include any duplicate values. <br>
@@ -52,7 +55,7 @@
         • The has() method can be used to check if a value is in a set. This returns a boolean value of true or false. The has() method that sets use is a very efficient operation and much faster than using the includes() or indexOf() methods to check if a value is in an array.<br>
         • The delete() method can be used to remove a value from a set. This returns a boolean value of true if the value was removed from the set, or false if the value wasn't in the set and couldn't be removed.<br>
         • The clear() method can be used to remove all values from a set.It's also possible to use the Array.from() method to convert a set into an array.<br>
-        • Weak sets avoid this situation by garbage collecting any references to a 'dead object' that’s had its original reference removed.<br>
+        • Weak sets avoid this situation by garbage collecting any references to a 'dead object' that's had its original reference removed.<br>
         • To create a weak set, the new operator and the WeakSet() constructor in the same way that we created a set.<br>
         • Apart from these restrictions, weak sets behave in the same way as regular sets, and have the has(), add(), and delete() methods that work in the same way.<br>
         • Maps were another data structure introduced in the ES6 specification. They are a convenient way of keeping a list of key and value pairs, and are similar to 'hashes', or 'hash tables' or 'dictionaries' in other programming languages.<br>
@@ -73,15 +76,15 @@
          • To define a function literal we can use a function declaration. Another way of defining a function literal is to create a function expression. This assigns an anonymous function to a variable.<br>
          • A function can also be declared using the constructor Function(). It's not recommended to declare functions in this way as there are numerous problems associated with placing the function body inside a string.<br>
          • Even in this simple example, we had to use different quotation marks for the console.log method, as those used for defining the function body itself.<br>
-         • Invoking a function is to run the code inside the function’s body. To invoke a function, simply enter its name, followed by parentheses.<br>
-         • Don’t Repeat Yourself, or DRY, is a principle of programming that specifies that every part of a program should only be written once. This avoids duplication and means there’s no need to keep multiple pieces of code up to date and in sync. <br>
+         • Invoking a function is to run the code inside the function's body. To invoke a function, simply enter its name, followed by parentheses.<br>
+         • Don't Repeat Yourself, or DRY, is a principle of programming that specifies that every part of a program should only be written once. This avoids duplication and means there's no need to keep multiple pieces of code up to date and in sync. <br>
          • Remember: you need parentheses to invoke a function ― either by name or by reference to the variable it is assigned to. If you skip the parentheses, you are simply referencing the function itself rather than invoking it.<br>
-         • All functions return a value, which can be specified using the return statement, which comes after the return keyword. A function that doesn’t explicitly return anything (such as all the examples we have seen so far) will return undefined by default.<br>
+         • All functions return a value, which can be specified using the return statement, which comes after the return keyword. A function that doesn't explicitly return anything (such as all the examples we have seen so far) will return undefined by default.<br>
          • Parameters and arguments are terms that are often used interchangeably to represent values provided for the function as an input. You can use as many parameters as you like when defining functions.<br>
          • Every function has a special variable called arguments. This is an array-like object that contains every argument passed to the function when it is invoked. We can create a simple function called arguments() that will return the arguments object.<br>
          • ES6 introduced a new syntax for declaring functions called the arrow syntax. These make declaring functions much more succinct by using less verbose syntax.<br>
          • Arrow functions can be identified by the 'arrow' symbol, => that gives them their name. The parameters come before the arrow and the main body of the function comes after. Arrow functions are always anonymous, so if you want to refer to them, you must assign them to a variable. <br>
-         • Hoisting is the JavaScript interpreter’s action of moving all variable and function declarations to the top of the current scope, regardless of where they are defined.<br>
+         • Hoisting is the JavaScript interpreter's action of moving all variable and function declarations to the top of the current scope, regardless of where they are defined.<br>
          • Functions that are defined using a function declaration are automatically hoisted, meaning they can be invoked before they have been defined. <br>
          • Variable declarations that use the var keyword are automatically moved to the top of the current scope. Variable assignment is not hoisted, however.<br>
          • This means that a variable assigned at the end of a function will have a value of undefined until the assignment is made.<br>
@@ -90,6 +93,8 @@
          • Arrays have a number of methods that utilize callbacks to make them more flexible. The reduce() method is another method that iterates over each value in the array, but this time it cumulatively combines each result to return just a single value.<br>
          • The callback function is used to describe how to combine each value of the array with the running total. <br>
       </p>
+      </main>
+
       <button onclick="location.href ='../'">Click Here To Go Back To Portfolio </button>
       <button onclick="location.href ='../test2.html'">Click Here To Go To Example Code which is tested.</button>
 
