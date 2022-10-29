@@ -52,6 +52,10 @@ const links = [
     label: "Week 7 Notes ",
     url: "week7/index.html",
   },
+  {
+    label: "Week 7 Notes ",
+    url: "week7/index.html",
+  },
   //Uncomment when the second week is made available
 ];
 
