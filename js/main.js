@@ -57,13 +57,13 @@ const links = [
     url: "week7/teamwork.html",
   },
   {
-    label: "Week 8 Team Assignment ",
-    url: "week7/teamwork.html",
-  },
-  {
     label: "Week 8 Notes ",
     url: "week8/index.html",
   },
+  {
+    label: "Week 8 Team Assignment ",
+    url: "week7/teamwork.html",
+  }
   //Uncomment when the second week is made available
 ];
 
