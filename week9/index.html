@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>WDD 330 Portfolio - Week 9 Notes</title>
+    <link rel="stylesheet" href="../css/style.css" >
+  </head>
+  <body>
+    <main>
+      <h1>Week 9 Notes</h1>
+      <h2>Novice to Ninja : Lesson 9 The Window Object</h2>
+
+      <p>
+      • Every JavaScript environment has a global object. Any variables that are created in the global scope are actually properties of this object, and any functions are methods of it. <br>
+      • In a browser environment the global object is the window object, which represents the browser window that contains a web page. <br>
+      • ➡️ The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen. <br>
+      • ➡️ Three functions that produced dialogs in the browsers: alert(), confirm() and prompt(). These are not part of the ECMAScript standard, although all major browsers support them as methods of the window object. <br>
+      • 💢It's worth reiterating again that these methods will stop the execution of a program in its tracks. This means that everything will stop processing at the point the method is called, until the user clicks OK or Cancel.<br>
+       This can cause problems if the program needs to process something else at the same time or the program is waiting for a callback function.<br>
+      • The window object has a number of properties and methods that provide information about the user's browser.<br>
+      • The window.location property is an object that contains information about the URL of the current page. It contains a number of properties that provide information about different fragments of the URL.<br>
+      • The window.history property can be used to access information about any previously visited pages in the current browser session. <br>
+      • These methods were largely responsible for giving JavaScript a bad name, as they were used for creating annoying pop-up windows that usually contained intrusive advertisements. It's also a bad idea from a usability standpoint to resize or move a user's window.<br>
+      • Many browsers block pop-up windows and disallow some of these methods to be called in certain cases. For example, you can't resize a window if more than one tab is open. You also can't move or resize a window that wasn't created using window.open().<br>
+      • The window.screen object contains information about the screen the browser is displayed on. You can find out the height and width of the screen in pixels using the height and width properties respectively.<br>
+      • ➡️ The Screen object has more uses for mobile devices. It also allows you to do things like turn off the device's screen, detect a change in its orientation or lock it in a specific orientation.<br>
+      • Many of the methods and properties covered in the previous section were abused in the past for dubious activities such as user-agent sniffing, or detecting screen dimensions to decide whether or not to display certain elements. <br>
+      • Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window. <br>
+      • Cookies are small files that are saved locally on a user's computer. They were invented by Netscape as a way of getting round HTTP being a stateless protocol. This means that a browser does not remember anything from one request to another.<br>
+      • A restriction of cookies is that they can only be read by a web page from the same domain that set them. This is to stop sites being able to access information about users, such as other sites they have visited. <br>
+      • Applications that contain sensitive information shouldn't rely on cookies expiring using these methods. Browsers can sometimes hold on to information stored in a cookie that should have expired when the “session restore” feature is used after a crash.<br>
+      • setTimeout() : The window object provides some useful methods for scheduling the execution of a function, and for repeatedly executing functions at regular intervals.<br>
+      • setInterval() : The window.setInterval() method works in a similar way to window.setTimeout(), except that it will repeatedly invoke the callback function after every given number of milliseconds.<br>
+      • 💢 Be careful when using a method that uses the this keyword with either of these timing methods. The binding of this is set to the window object, rather than the method's object.<br>
+      • This method of the window object works in much the same way as the window.setInterval() method, although it has a number of improvements to optimize its performance. <br>
+      • Cookies can be used for personalizing a user's browsing experience, storing user preferences, keeping track of user choices (such as a shopping cart), authentication and tracking users. <br>
+
+      </p>
+
+      <h2>Novice to Ninja : Lesson 14 HTML 5 APIs </h2>
+      
+      <p>
+      • HTML5 is the latest version of the Hypertext Markup Language used to create web pages. The latest iteration is HTML 5.1, which finally became a W3C recommendation in November 2016.<br>
+      • HTML5 was for HTML what ES6 was for JavaScript - it added a large number of new features to the specification. It also went beyond the actual markup language and brought together a number of related technologies such as CSS and JavaScript.<br>
+      • The W3C plans to develop future versions of HTML5 much more frequently than previously, using smaller version increments. <br>
+      • The HTML5 specification is separated into modules that allow different features to be developed at different paces then implemented without having to wait for other features to be completed.<br>
+      • The HTML5 specification contains a number of APIs that help to gain access to hardware, such as cameras, batteries, geolocation, and the graphics card. Hardware evolves quickly, and APIs are frequently introduced to give developers access, and control new features that appear in the latest devices.<br>
+      • The Web Storage API provides a key-value store on the client's computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use. <br>
+      • The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find the user's exact location, then link to nearby places or measure the speed at which the user is moving. This information can then be used to filter data based on the user's location or speed and direction of travel. <br>
+      • We saw in earlier chapters that JavaScript is a single-threaded language, meaning that only one process can run at one time. Web workers allow processes to be run in the background, adding support for concurrency in JavaScript. <br>
+      • At the time of writing, the Chrome browser won't let you run workers from local files like this. A workaround is start Chrome using the --allow-file-access-from-files flag, or simply use a different browser for this example.<br>
+      • If you decide to use the --allow-file-access-from-files flag, make sure you only use this for development, rather than for regular browsing.<br>
+      • 💢 Factors : This works well, but can take a long time to find the factors of large numbers. If it was used in a website, it would stop any other code from running while it calculated the factors. <br>
+      • The file containing the worker code is expected to be hosted on a server. This is the best option, but if you want to run an example locally you need to turn off the same origin policy setting in the browser.<br>
+      • The examples we have seen so far are known as dedicated web workers. These are linked to the script that loaded the worker, and are unable to be used by another script. You can also create shared web workers that allow lots of different scripts on the same domain to access the same worker object.<br>
+      • The Service Worker API allows a worker script to run in the background with the added benefit of being able to intercept network requests. This allows you to take alternative action if the network is offline, and effectively create app-like offline experiences. <br>
+      • As we saw in the last chapter, the main form of communication on the web has always been the HTTP protocol. This uses a system of request and response to send data back and forth. A problem with this method of communication is when you only get a response when a request is sent. <br>
+      • The Notification API allows you to show messages using the system's notifications. This is usually a popup in the corner of the screen, but it changes depending on the operating system. <br>
+      • 💢 There are some security and privacy considerations to keep in mind when considering some HTML5 APIs - especially those on the cutting edge that haven't been used 'in the wild' for long.<br>
+      • HTML5 APIs progress at a rapid rate ― new APIs are constantly being introduced, and existing APIs often change. Modern browsers are very quick to update and implement many of the changes, but you can't always guarantee that users will have the most up-to-date browser. <br>
+      • Find the list of resources below for more documentation about APIs and material for HTML5.<br>
+      </p>
+<div style="display: inline-flex;">
+    <ul style="display:flex; flex-wrap:wrap;">
+      <button onclick="location.href ='../'">Click Here To Go Back To Portfolio </button><br>
+      <button onclick="location.href ='https://codepen.io/daz4126/pen/YQaoWr'">Click Here To Go To CodePen Lesson 9.</button><br>
+      <button onclick="location.href ='https://codepen.io/daz4126/pen/ZyxdLY'">Click Here To Go To CodePen Lesson 14.</button><br>
+      <button onclick="location.href ='https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills'">Click Here To Go To Cross Browser Polyfills.</button><br>
+      <button onclick="location.href ='https://developer.mozilla.org/en-US/docs/Web/API'">Click Here To Go To MDN Web APIs.</button><br>
+    </ul>
+    <ul style="display:flex; flex-wrap:wrap;" >
+      <button onclick="location.href ='w3.org/2010/05/video/mediaevents.html'">Click Here To Go To HTML5 Video APIs.</button><br>
+      <button onclick="location.href ='https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers'">Click Here To Go MDN Web Workers APIs.</button><br>
+      <button onclick="location.href ='https://developer.mozilla.org/en-US/docs/Web/API/notification'">Click Here To Go To MDN Notification API.</button><br>
+      <button onclick="location.href ='https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API'">Click Here To Go To MDN Geolocation API.</button><br>
+      <button onclick="location.href ='https://www.sitepoint.com/an-overview-of-the-web-storage-api/'">Click Here To Go To Web Storage API SitePoint.</button><br>
+    </ul>
+</div>
+
+</main>
+      <footer>Portfolio WDD 330 | Week 9</footer>
+  </body>
+</html>
