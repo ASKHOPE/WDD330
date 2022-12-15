@@ -1,7 +1,14 @@
-export function readFromLS(t) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true,
+});
+exports.readFromLS = readFromLS;
+exports.writeToLS = writeToLS;
+function readFromLS(t) {
   return JSON.parse(localStorage.getItem(t));
 }
-export function writeToLS(t, e) {
+function writeToLS(t, e) {
   let r = JSON.stringify(e);
   localStorage.setItem(t, r);
 }
