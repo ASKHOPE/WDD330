@@ -94,6 +94,10 @@ const links = [
     label: "Week 11 - 14 Block Challenge 2: Personal Project ",
     url: "week14/index.html",
   },
+  {
+    label: "Week 14 Portfolio Video ",
+    url: "https://youtu.be/laW3GTqt9KI",
+  },
   //Uncomment when the second week is made available
 ];
 
