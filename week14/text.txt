@@ -1,0 +1,2 @@
+Medium and Large view 
+localstorage save timer.
