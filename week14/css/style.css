@@ -146,19 +146,28 @@ button#mathe{
 }}
 
 
-@media only screen and (min-width:680){
+@media only screen and (min-width:680px){
     
 button#mathe{
     padding:1vw;
     margin-left:-22%;
+}}
+    
+
+@media only screen and (min-width:740px){
+    
+button#mathe{
+    /* padding:1vw; */
+    margin-left:-8%;
 }
     
+
 }
 /*  THE MEDIUM VIEW PORT CSS GOES HERE (TABLET)*/
 @media only screen and (min-width: 600px) {
   img#logo{
-    left:0;
-    top:0;
+    left:0px;
+    top:0px;
     opacity: 100% ;
     position:relative;
     grid-row:1;
