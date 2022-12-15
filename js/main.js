@@ -72,7 +72,7 @@ const links = [
     label: "Week 9 Team Assignment ",
     url: "week9/teamwork.html",
   },
-   {
+  {
     label: "Week 10 Notes ",
     url: "week10/index.html",
   },
@@ -80,10 +80,20 @@ const links = [
     label: "Week 10 Team Assignment ",
     url: "week10/teamwork.html",
   },
-   {
-    label: "Week 11 - 14 Challenge 2 ",
+
+  {
+    label: "Week 11 Team Assignment ",
+    url: "week11/teamwork.html",
+  },
+
+  {
+    label: "Week 12 Team Assignment ",
+    url: "week12/teamwork.html",
+  },
+  {
+    label: "Week 11 - 14 Block Challenge 2: Personal Project ",
     url: "week14/index.html",
-  }
+  },
   //Uncomment when the second week is made available
 ];
 
