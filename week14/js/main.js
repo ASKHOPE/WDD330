@@ -13,10 +13,10 @@ function sendig() {
   }
   {
     let o = e.match(/[^\d()]+|[\d.]+/g);
-    console.log("matchses", o),
-      console.log("a", o[0]),
-      console.log("op", o[1]),
-      console.log("b", o[2]);
+  //  console.log("matchses", o),
+    //  console.log("a", o[0]),
+    //  console.log("op", o[1]),
+    //  console.log("b", o[2]);
     let n = o[0],
       l = o[1],
       s = o[2];

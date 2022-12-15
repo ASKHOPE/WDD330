@@ -39,12 +39,12 @@ function timenowis() {
   var e = new Date(),
     t = e.getFullYear() + "-" + (e.getMonth() + 1) + "-" + e.getDate(),
     n = e.getHours() + ":" + e.getMinutes() + ":" + e.getSeconds();
-  console.log(t + " " + n);
+ // console.log(t + " " + n);
 }
 function countowntimers(e) {
   let t = e,
     n = parseInt(t);
-  console.log(n + "this is from countdown timer");
+  //console.log(n + "this is from countdown timer");
   var o,
     r = n,
     i = document.getElementById("clocks"),
