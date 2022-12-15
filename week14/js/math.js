@@ -1,15 +1,6 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true,
-});
-exports.default = void 0;
-var _todos = _interopRequireDefault(require("./todos.js"));
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-let todo = new _todos.default("tasks");
-class t {
+import e from "./todos.js";
+let todo = new e("tasks");
+export default class t {
   constructor(e) {
     (this.element = document.getElementById(e)),
       (this.key = e),
@@ -19,7 +10,6 @@ class t {
     solve(e, t, s, l);
   }
 }
-exports.default = t;
 function solve(e, t, s, l) {
   switch (t) {
     case "+":
