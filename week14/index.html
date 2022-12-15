@@ -3,7 +3,7 @@
 <head>
 <meta charset=UTF-8>
 <meta http-equiv=X-UA-Compatible content="IE=edge">
-<meta name=viewport content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
 <title>MadMatxApp</title>
 <link rel=stylesheet href=css/style.css>
 <link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin>
@@ -12,11 +12,16 @@
 <body>
 <main>
 <h1> MadMathx </h1>
-<img src=images/logo-small.png alt=logo id=logo>
+<img src=images/logo-small.png alt=logosmall id=logo>
 <div class=clockworks>
 <h2>Clock</h2>
 <div id=clock onload=currentTime()></div>
+<div id=hintclock>
+    <p> Use the phrase countdown followed by number of minutes or seconds indicating type.ex: countdown 10 minutes will start the countdown</p>
+</div>
 <div id=clocks onload=currentTime()></div>
+
+
 </div>
 <div class=mathworks>
 <div id=mathcalc>
@@ -46,9 +51,11 @@
 </div>
 </div>
 </main>
-<div id=footer-app>
-<input type=text id=new-task placeholder="New Task">
-<button type=submit id=mathe>&#128269;</button>
+
+<div id=footer-app >
+<label for="new-task" class="newtask" style="color:white">Enter</label>
+<input type=text id=new-task placeholder="New Task" name = "New Task">
+<button type=submit id=mathe  class="search-icon">&#128269;</button>
 </div>
 <script src=js/main.js type=module></script>
 </body>

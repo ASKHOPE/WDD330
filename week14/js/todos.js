@@ -76,13 +76,16 @@ function renderToDoList(e, t) {
   (e.innerHTML = ""),
     t.forEach((t) => (e.innerHTML += renderOneToDo(t))),
     updateCount(t);
-}
+} // <label for ="${e.id}">👉</label> //goes inside li
 function renderOneToDo(e) {
-  return `<li id="${e.id}" ${e.completed ? 'class="completed"' : ""}>
-        <input name="${e.content}" type="checkbox" value="none" ${
+  return `<li id="${e.id}" ${
+    e.completed ? 'class="completed"' : ""
+  }> 
+   
+        <input name="${e.content}" type="checkbox" value="none" id="${e.id}" ${
     e.completed ? "checked" : ""
-  }>
-        <p>${e.content}</p>
+  }
+        <p >${e.content}</p>
         <div class="delete">X</div>
     </li>`;
 }
