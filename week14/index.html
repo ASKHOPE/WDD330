@@ -1,71 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-    <title>MadMatxApp</title>
-    <link rel="icon" type="image/png" href="./image/favicon-16x16.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300&display=swap" rel="stylesheet">
+<meta charset=UTF-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1.0,user-scalable=no">
+<title>MadMatxApp</title>
+<link rel=icon type=image/png href=./image/favicon-16x16.png>
+<link rel=stylesheet href=css/style.css>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300&display=swap" rel=stylesheet>
 </head>
 <body>
-    <main>
-        <h1> MadMathx </h1>
-        <img src="images/logo-small.png" alt="logo" id="logo">
-
-        <div class="clockworks">
-            <h2>Clock</h2>
-            <div id = "clock" onload="currentTime()"></div>
-            <div id = "clocks" onload="currentTime()"></div>
-
-            
-        </div>
-
-        <div class="mathworks">
-            <div id = "mathcalc">
-                <div id ="hintmath">
-                    <h2>Math</h2>
-                    <p> Use of a number followed by (+-*/) and a number results in math. ex:1+1</p>
-                </div>
-                <div id ="resultmath">
-                    <!-- <h2>Math</h2> -->
-                    <!-- <p> Use Equals Button in a syntax like Number (+-*/) Number to do math.</p> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="todos">
-            <div id="app" class="round-border">
-                        <div id="header-app" >
-                            <h2>To-Do</h2>
-                            <div id="error"></div>
-                        </div>
-                        <div id="main-app">
-                            <ul id="tasks" style="padding-left: 0%;"> </ul>
-                            <div class="info">
-                                <div id="num-task">0 tasks left</div>
-                                <input class="tab selected-tab" type="button" id="all" value="All">
-                                <input class="tab" type="button" id="active" value="Active">
-                                <input class="tab" type="button" id="complete" value="Completed">
-                            </div>
-                        </div>
-                        
-                    </div>
-        </div>
-    
-    </main>
-    <div id="footer-app">
-                            <input type="text" id="new-task" placeholder="New Task">
-                            <!-- <button type="submit" id="add">✓</button> -->
-                            <button type="submit" id="mathe">&#128269;</button>
-                            <!-- <button type="submit" id="timeclock"> ⧖</button> -->
-
-                        </div>
-
-<script src="js/main.js" type="module"></script>
-
+<main>
+<h1> MadMathx </h1>
+<img src=images/logo-small.png alt=logo id=logo>
+<div class=clockworks>
+<h2>Clock</h2>
+<div id=clock onload=currentTime()></div>
+<div id=clocks onload=currentTime()></div>
+</div>
+<div class=mathworks>
+<div id=mathcalc>
+<div id=hintmath>
+<h2>Math</h2>
+<p> Use of a number followed by (+-*/) and a number results in math. ex:1+1</p>
+</div>
+<div id=resultmath>
+</div>
+</div>
+</div>
+<div class=todos>
+<div id=app class=round-border>
+<div id=header-app>
+<h2>To-Do</h2>
+<div id=error></div>
+</div>
+<div id=main-app>
+<ul id=tasks style=padding-left:0> </ul>
+<div class=info>
+<div id=num-task>0 tasks left</div>
+<input class="tab selected-tab" type=button id=all value=All>
+<input class=tab type=button id=active value=Active>
+<input class=tab type=button id=complete value=Completed>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div id=footer-app>
+<input type=text id=new-task placeholder="New Task">
+<button type=submit id=mathe>&#128269;</button>
+</div>
+<script src=js/main.js type=module></script>
 </body>
-
 </html>

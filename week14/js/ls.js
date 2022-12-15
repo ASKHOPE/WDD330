@@ -1,9 +1,7 @@
-export function readFromLS(key) {
-  let ls = JSON.parse(localStorage.getItem(key)); //  convert LS text to JSON
-  return ls;
+export function readFromLS(t) {
+  return JSON.parse(localStorage.getItem(t));
 }
-
-export function writeToLS(key, data) {
-  let text = JSON.stringify(data); // prepare our data to be saved to LS. Convert it to text
-  localStorage.setItem(key, text);
+export function writeToLS(t, e) {
+  let r = JSON.stringify(e);
+  localStorage.setItem(t, r);
 }
